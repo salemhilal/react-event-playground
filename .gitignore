@@ -1,3 +1,6 @@
+# keyfile
+app/keyfile.js
+
 # Numerous always-ignore extensions
 *.diff
 *.err
