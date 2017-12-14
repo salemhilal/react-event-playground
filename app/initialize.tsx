@@ -4,11 +4,11 @@ import * as React from "react";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-import App from "components/App";
+import App from "./components/App";
 import {
     getAllEventsFromUrl,
     getAllPagesFromFacebookUrl
-} from "network/facebook";
+} from "./network/facebook";
 
 import { FACEBOOK_TOKEN } from "./keyfile.js";
 
@@ -16,6 +16,7 @@ let store = createStore(reducer);
 function reducer() {}
 
 console.log('fb token:', FACEBOOK_TOKEN);
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let lol = events.map((event) => {
             return event.name
         })
-        console.log("here is what the callback gave us:", lol);
+        console.log("Here is what the callback gave us, except this time with webpack:", lol);
     });
 
     ReactDOM.render(

@@ -43,14 +43,18 @@ interface FbResponseBody {
     data: Array<Object> | null;
 }
 
+interface FbEvent {
+    name: string,
+}
+
 /**
  * Given a facebook URL string, fetch all the possible paginated data
  * all at once. Returns a promise.
  * @param {string} url
  */
-function getAllPagesFromFacebookUrl(url: string): Promise<Array<Object>> {
-    let next: string | null = url;
-    let data: Array<Object> = [];
+function getAllPagesFromFacebookUrl(url: string): Promise<Array<FbEvent>> {
+    let next: string = url;
+    let data: Array<FbEvent> = [];
 
     function action(): Promise<void> {
         return fetch(next, { credentials: "same-origin" })
@@ -58,8 +62,8 @@ function getAllPagesFromFacebookUrl(url: string): Promise<Array<Object>> {
                 return response.json();
             })
             .then((body: FbResponseBody) => {
-                next = (body.paging && body.paging.next) || null;
-                data = data.concat(body.data || []);
+                next = (body.paging && body.paging.next) || '';
+                data = data.concat(body.data as Array<FbEvent> || []);
             });
     }
 

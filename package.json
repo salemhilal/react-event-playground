@@ -1,13 +1,14 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
+  "name": "react-events",
+  "description": "React event feed",
   "private": true,
-  "author": "Brunch",
+  "author": "Salem Hilal",
   "version": "0.0.1",
   "repository": "",
   "scripts": {
-    "start": "brunch watch --server",
-    "build": "brunch build --production"
+    "start": "webpack-dev-server --open",
+    "watch": "webpack --progress --watch",
+    "build": "webpack"
   },
   "dependencies": {
     "immutable": "^3.8.2",
@@ -20,17 +21,26 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.34",
+    "@babel/preset-env": "^7.0.0-beta.34",
     "@types/bluebird": "^3.5.18",
     "@types/core-js": "^0.9.36",
-    "auto-reload-brunch": "^2",
-    "babel-brunch": "6.1.1",
+    "@types/node": "7.0.7",
+    "@types/react": "^16.0.30",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "awesome-typescript-loader": "^3.4.1",
+    "babel-loader": "^8.0.0-beta.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-latest": "^6",
     "babel-preset-react": "~6.22",
-    "brunch": "^2",
-    "brunch-typescript": "^2.1.0",
-    "clean-css-brunch": "^2",
+    "copy-webpack-plugin": "^4.3.0",
     "prettier": "1.8.2",
-    "uglify-js-brunch": "^2"
+    "source-map-loader": "^0.2.3",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
