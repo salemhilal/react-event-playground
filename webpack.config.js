@@ -17,7 +17,7 @@ module.exports = {
         compress: true,
         port: 3333,
         inline: true,
-        open: false,
+        open: false
     },
 
     // TODO: Build vendor and app.js separately
@@ -40,7 +40,10 @@ module.exports = {
     ],
 
     resolve: {
-        modules: ["node_modules", path.resolve(__dirname, "app")],
+        modules: [
+            path.resolve(__dirname, "node_modules"),
+            path.resolve(__dirname, "app"),
+        ],
         extensions: [".tsx", ".ts", ".js", ".json"]
     }
 };
