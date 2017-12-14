@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+    }
+}

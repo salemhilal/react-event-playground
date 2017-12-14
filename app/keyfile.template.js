@@ -2,6 +2,4 @@
 // put your keys for the related services
 // below.
 
-export default {
-    facebook_token: "YOUR_KEY",
-};
+export const FACEBOOK_TOKEN = "YOUR FACEBOOK KEY";

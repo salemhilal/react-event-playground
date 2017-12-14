@@ -11,5 +11,10 @@ exports.files = {
 
 exports.plugins = {
     babel: { presets: ["env", "latest", "react"] },
-    brunchTypescript: { jsx: "react" }
+    brunchTypescript: {
+        strict: true,
+        jsx: "react",
+        strictNullChecks: true,
+        removeComments: true,
+    }
 };
