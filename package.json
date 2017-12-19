@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "repository": "",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server",
     "watch": "webpack --progress --watch",
     "build": "webpack"
   },

@@ -1,6 +1,3 @@
-import { Models } from "../types";
-
-
 /**
  * Given a predicate and a function that returns a promise (an action),
  * call the action while the predicate evaluates to true, and return a
@@ -13,7 +10,7 @@ import { Models } from "../types";
  * @param  {()   => Promise} action - the body of the loop to evaluate
  * @return {Promise}
  */
-function promiseWhile<T>(
+export function promiseWhile<T>(
     predicate: () => boolean,
     action: () => Promise<T>
 ): Promise<T> {
@@ -25,5 +22,3 @@ function promiseWhile<T>(
     }
     return Promise.resolve().then(loop);
 }
-
-export { promiseWhile };

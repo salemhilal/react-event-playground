@@ -33,31 +33,12 @@ function getAllPagesFromFacebookUrl(
     });
 }
 
-function fetchPageEventData(
-    pageId: number
-): Promise<Array<Models.FbEvent>> {
-    return fetch(
-        `https://graph.facebook.com/v2.8/${
-            pageId
-        }/events?access_token=${FACEBOOK_TOKEN}&fields=start_time,place,name,cover,attending_count,interested_count,description`,
-        {
-            credentials: "same-origin"
-        }
-    ).then(response => {
-        return response.json();
-    });
-    // .then(json => {
-    //     // Ok this seems to work!
-    //     console.log(json);
-    // });
+function fetchPageEventData(pageId: number): Promise<Array<Models.FbEvent>> {
+    let url = `https://graph.facebook.com/v2.8/${pageId}/events?access_token=${
+        FACEBOOK_TOKEN
+    }&fields=start_time,place,name,cover,attending_count,interested_count,description`;
+
+    return getAllPagesFromFacebookUrl(url);
 }
 
-fetchPageEventData(1188861887793290).then(json => {
-    // Ok this seems to work!
-    console.log(json);
-});
-
-
-export {
-    fetchPageEventData
-}
+export { fetchPageEventData };
