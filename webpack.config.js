@@ -42,7 +42,7 @@ module.exports = {
     resolve: {
         modules: [
             path.resolve(__dirname, "node_modules"),
-            path.resolve(__dirname, "app"),
+            path.resolve(__dirname, "app")
         ],
         extensions: [".tsx", ".ts", ".js", ".json"]
     }
