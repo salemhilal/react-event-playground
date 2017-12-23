@@ -34,6 +34,7 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin([
             { from: "app/assets/index.html", to: "index.html" },
+            { from: "app/assets/favicon.ico", to: "favicon.ico" },
             { from: "app/styles/application.css", to: "app.css" }
         ])
         // new UglifyJsPlugin(),
