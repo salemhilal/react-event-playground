@@ -20,6 +20,12 @@
             "ScriptHost"
         ]
     },
+    "awesomeTypescriptLoaderOptions": {
+        "reportFiles": [
+            "app/**/*.{ts,tsx}"
+        ],
+        "useCache": true
+    },
     "include": [
         "./app/**/*"
     ]
