@@ -1,4 +1,6 @@
 import "whatwg-fetch";
+import "laurence"; // Remove for production
+
 import * as ReactDOM from "react-dom";
 import * as React from "react";
 import { createStore } from "redux";
@@ -12,16 +14,14 @@ import { FACEBOOK_TOKEN } from "./keyfile.js";
 let store = createStore(reducer);
 function reducer() {}
 
-console.log("fb token:", FACEBOOK_TOKEN);
-
 document.addEventListener("DOMContentLoaded", () => {
     fetchPageEventData(1188861887793290).then(function(events) {
-        let lol = events.map(event => {
+        let eventNames = events.map(event => {
             return event.name;
         });
         console.log(
-            "Here is what the callback gave us, except this time with webpack:",
-            lol
+            "Here are the names of all the events we got back:",
+            eventNames
         );
     });
 
