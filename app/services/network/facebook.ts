@@ -1,7 +1,6 @@
-import { Models } from "../types";
-import { promiseWhile } from "./tools";
-import { FACEBOOK_TOKEN } from "../keyfile.js";
-
+import { Models } from "types";
+import { promiseWhile } from "services/network/tools";
+import { FACEBOOK_TOKEN } from "keyfile.js";
 
 /**
  * Given a facebook URL string, fetch all the possible paginated data
@@ -13,7 +12,6 @@ function getAllPagesFromFacebookUrl(
 ): Promise<Array<Models.FbEvent>> {
     let next: string = url;
     let data: Array<Models.FbEvent> = [];
-
 
     function action(): Promise<void> {
         let request = new Request(next);
@@ -36,7 +34,9 @@ function getAllPagesFromFacebookUrl(
     });
 }
 
-export function fetchPageEventData(pageId: number): Promise<Array<Models.FbEvent>> {
+export function fetchPageEventData(
+    pageId: number
+): Promise<Array<Models.FbEvent>> {
     let url = `https://graph.facebook.com/v2.8/${pageId}/events?access_token=${
         FACEBOOK_TOKEN
     }&fields=start_time,place,name,cover,attending_count,interested_count,description`;

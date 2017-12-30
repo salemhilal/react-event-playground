@@ -13,20 +13,15 @@
         "strict": true,
         "moduleResolution": "Node",
         "forceConsistentCasingInFileNames": true,
-        "lib": [
-            "ES5",
-            "ES2015",
-            "DOM",
-            "ScriptHost"
-        ]
+        "lib": ["ES5", "ES2015", "DOM", "ScriptHost"],
+        "baseUrl": ".",
+        "paths": {
+            "*": ["*", "app/*"]
+        }
     },
     "awesomeTypescriptLoaderOptions": {
-        "reportFiles": [
-            "app/**/*.{ts,tsx}"
-        ],
+        "reportFiles": ["app/**/*.{ts,tsx}"],
         "useCache": true
     },
-    "include": [
-        "./app/**/*"
-    ]
+    "include": ["./app/**/*"]
 }

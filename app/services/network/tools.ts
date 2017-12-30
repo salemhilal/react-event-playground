@@ -6,8 +6,8 @@
  * this inside a function that provides access to some sort of in-scope
  * state.
  *
- * @param  {()   => boolean} predicate - continue loop while this is true
- * @param  {()   => Promise} action - the body of the loop to evaluate
+ * @param  {() => boolean} predicate - continue loop while this is true
+ * @param  {() => Promise} action - the body of the loop to evaluate
  * @return {Promise}
  */
 export function promiseWhile<T>(

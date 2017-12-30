@@ -32,18 +32,14 @@
     "@types/react-redux": "^5.0.14",
     "@types/redux": "^3.6.0",
     "awesome-typescript-loader": "^3.4.1",
-    "babel-loader": "^8.0.0-beta.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-latest": "^6",
-    "babel-preset-react": "~6.22",
     "copy-webpack-plugin": "^4.3.0",
+    "laurence": "^1.0.0",
     "prettier": "1.8.2",
     "source-map-loader": "^0.2.3",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
     "uglifyjs-webpack-plugin": "^1.1.4",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7",
-    "laurence": "^1.0.0"
+    "webpack-dev-server": "^2.9.7"
   }
 }

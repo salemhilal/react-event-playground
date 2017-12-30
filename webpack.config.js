@@ -37,13 +37,13 @@ module.exports = {
             { from: "app/assets/favicon.ico", to: "favicon.ico" },
             { from: "app/styles/application.css", to: "app.css" }
         ])
-        // new UglifyJsPlugin(),
+        //new UglifyJsPlugin()
     ],
 
     resolve: {
         modules: [
-            path.resolve(__dirname, "node_modules"),
-            path.resolve(__dirname, "app")
+            path.resolve(__dirname, "app"),
+            path.resolve(__dirname, "node_modules")
         ],
         extensions: [".tsx", ".ts", ".js", ".json"]
     }
