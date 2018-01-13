@@ -9,19 +9,28 @@ import "laurence"; // Remove for production
 import * as ReactDOM from "react-dom";
 import * as React from "react";
 import thunk from "redux-thunk";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, combineReducers } from "redux";
 import { Provider } from "react-redux";
+import { State } from "types";
 
-import App from "./components/App";
+import Feed from "scenes/Feed/index";
+import { feedReducer } from "scenes/Feed/reducer";
 
-let store = createStore(reducer, applyMiddleware(thunk));
+console.log(feedReducer);
 
-function reducer() {}
+var combinedReducer = combineReducers<State.Global>({
+    feed: feedReducer
+});
+
+// TODO: can I make the state a class so that I can default field values?
+let store = createStore(combinedReducer, {}, applyMiddleware(thunk));
+
+console.log("initial store", store);
 
 document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render(
         <Provider store={store}>
-            <App />
+            <Feed />
         </Provider>,
         document.querySelector("#app")
     );

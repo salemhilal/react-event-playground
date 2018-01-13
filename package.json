@@ -30,7 +30,6 @@
     "@types/react": "^16.0.30",
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
-    "@types/redux": "^3.6.0",
     "awesome-typescript-loader": "^3.4.1",
     "copy-webpack-plugin": "^4.3.0",
     "laurence": "^1.0.0",

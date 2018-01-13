@@ -16,7 +16,8 @@
         "lib": ["ES5", "ES2015", "DOM", "ScriptHost"],
         "baseUrl": ".",
         "paths": {
-            "*": ["*", "app/*"]
+            "*": ["*", "app/*"],
+            "redux": ["node_modules/redux-next"]
         }
     },
     "awesomeTypescriptLoaderOptions": {
